@@ -1,0 +1,121 @@
+.client-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 600px;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  background-color: #183632;
+  perspective: 2000px;
+
+  .client-table {
+    visibility: hidden;
+    max-width: 1800px;
+    width: 98%;
+    padding: Min(75px, 4vw) Min(35px, 2vw) Min(17px, 1vw);
+    background: linear-gradient(to right, #567553, #a5c794);
+    border-radius: 4px;
+  }
+
+  .client-table-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: Min(11px, 0.6vw);
+    margin-bottom: Min(18px, 1vw);
+    font-family: 'Fredericka the Great';
+    font-size: Min(31px, 1.7vw);
+    color: rgba($color: #ffffff, $alpha: 0.9);
+    white-space: nowrap;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+  }
+
+  .client-table-row {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat Alternates';
+    font-size: Min(22px, 1.2vw);
+    color: rgba($color: #ffffff, $alpha: 0.75);
+    border-radius: 4px;
+  }
+
+  div.client-table-row:nth-of-type(odd) {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+
+  .column {
+    padding: Min(18px, 1vw);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .name {
+    flex-basis: 16%;
+  }
+
+  .address {
+    flex-basis: 20%;
+  }
+  
+  .city {
+    flex-basis: 16%;
+  }
+  
+  .country-code {
+    flex-basis: 14%;
+  }
+  
+  .loan-amount {
+    flex-basis: 15%;
+  }
+
+  .column.name,
+  .column.loan-amount {
+    font-weight: 600;
+  }
+  
+  .buttons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 15%;
+    flex-grow: 1;
+
+    button {
+      padding: Min(11px, 0.6vw) Min(18px, 1vw);
+      font-family: 'Montserrat Alternates';
+      font-size: Min(22px, 1.2vw);
+      letter-spacing: Min(3.7px, 0.2vw);
+      color: rgba($color: #ffffff, $alpha: 0.9);
+      background-color: #ecb45a;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color:  #ecb45a, $alpha: 0.2);
+        border-color: #ecb45a;
+        transition: background-color .1s, border-color .1s;
+        will-change: background-color, border-color;
+      }
+    }
+    
+    button:nth-of-type(2) {
+      color: rgba($color: #e62b0a, $alpha: 0.6);
+      background-color: #daa757;
+      
+      &:hover {
+        cursor: pointer;
+        color: rgba($color: #fa2d09, $alpha: 0.8);
+        background-color: rgba($color:  #ecb45a, $alpha: 0.2);
+        border-color: #ecb45a;
+        transition: color .1s, background-color .1s, border-color .1s;
+        will-change: color, background-color, border-color;
+      }
+    }
+  }
+}

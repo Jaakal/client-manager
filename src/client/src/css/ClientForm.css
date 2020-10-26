@@ -1,0 +1,275 @@
+.client-form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.client-form {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 50px 35px;
+  background-color: #4c6849;
+  border-radius: 4px;
+}
+
+.client-form .form-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 9999;
+}
+
+.client-form .form-close-button span:nth-of-type(1),
+.client-form .form-close-button span:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  pointer-events: none;
+}
+
+.client-form .form-close-button span:nth-of-type(1) {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.client-form .form-close-button span:nth-of-type(2) {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.client-form .form-close-button:hover {
+  cursor: pointer;
+}
+
+.client-form .form-close-button:hover span {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s;
+  will-change: background-color;
+}
+
+.client-form .form-row-wrapper {
+  position: relative;
+  width: 100%;
+  height: 41px;
+  margin-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #4c6849;
+}
+
+.client-form .form-row-wrapper .border-bottom-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+}
+
+.client-form .form-row-wrapper .border-bottom {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+}
+
+.client-form .form-row-wrapper .static-border-bottom {
+  background-color: #daa757;
+  z-index: 1;
+}
+
+.client-form .form-row-wrapper .active-border-bottom {
+  background-color: #f5d8aa;
+  z-index: 2;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  will-change: transform;
+}
+
+.client-form .form-row-wrapper .floating-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80%;
+  height: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  letter-spacing: -0.15px;
+  color: #f8f2f2;
+  pointer-events: none;
+  z-index: 1000;
+  -webkit-transition: font-size .2s, -webkit-transform .2s;
+  transition: font-size .2s, -webkit-transform .2s;
+  transition: font-size .2s, transform .2s;
+  transition: font-size .2s, transform .2s, -webkit-transform .2s;
+  will-change: font-size, transform;
+}
+
+.client-form .form-row-wrapper input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 42px;
+  padding: 0 25px 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.client-form .form-row-wrapper input:-webkit-autofill {
+  -webkit-transition-delay: 3600s;
+          transition-delay: 3600s;
+}
+
+.client-form .form-row-wrapper input::-webkit-input-placeholder {
+  color: #868686;
+  opacity: 0;
+}
+
+.client-form .form-row-wrapper input:-ms-input-placeholder {
+  color: #868686;
+  opacity: 0;
+}
+
+.client-form .form-row-wrapper input::-ms-input-placeholder {
+  color: #868686;
+  opacity: 0;
+}
+
+.client-form .form-row-wrapper input::placeholder {
+  color: #868686;
+  opacity: 0;
+}
+
+.client-form .form-row-wrapper input:focus::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: .2s opacity .1s;
+  transition: .2s opacity .1s;
+  will-change: opacity;
+}
+
+.client-form .form-row-wrapper input:focus:-ms-input-placeholder {
+  opacity: 1;
+  -webkit-transition: .2s opacity .1s;
+  transition: .2s opacity .1s;
+  will-change: opacity;
+}
+
+.client-form .form-row-wrapper input:focus::-ms-input-placeholder {
+  opacity: 1;
+  -webkit-transition: .2s opacity .1s;
+  transition: .2s opacity .1s;
+  will-change: opacity;
+}
+
+.client-form .form-row-wrapper input:focus::placeholder {
+  opacity: 1;
+  -webkit-transition: .2s opacity .1s;
+  transition: .2s opacity .1s;
+  will-change: opacity;
+}
+
+.client-form input[type="submit"] {
+  height: 40px;
+  padding: 0 20px;
+  margin-top: 30px;
+  font-family: 'Montserrat Alternates';
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #ecb45a;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+}
+
+.client-form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgba(236, 180, 90, 0.8);
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s;
+  will-change: background-color;
+}
+
+.client-form .form-row-wrapper.initialized .floating-label {
+  font-size: 15px;
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+}
+
+.client-form .error-message {
+  width: 0;
+  overflow: hidden;
+}
+
+.client-form .form-row-wrapper.focused.invalid .static-border-bottom {
+  background-color: rgba(245, 45, 10, 0.9);
+}
+
+.client-form .form-row-wrapper.focused.invalid .floating-label {
+  color: rgba(255, 0, 0, 0.75);
+}
+
+.client-form .form-row-wrapper.focused.invalid .floating-label .error-message {
+  width: auto;
+}
+
+.client-form .form-row-wrapper:focus-within .active-border-bottom,
+.client-form .form-row-wrapper.focused:focus-within .active-border-bottom,
+.client-form .form-row-wrapper.focused.invalid:focus-within .active-border-bottom {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.client-form .form-row-wrapper:focus-within .floating-label,
+.client-form .form-row-wrapper.focused:focus-within .floating-label,
+.client-form .form-row-wrapper.focused.invalid:focus-within .floating-label {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+  font-size: 15px;
+}
+
+.client-form .form-row-wrapper.invalid ~ input[type="submit"] {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(236, 180, 90, 0.4);
+  pointer-events: none;
+}
+/*# sourceMappingURL=ClientForm.css.map */

@@ -1,0 +1,50 @@
+.mount-birch-logo-animation-wrapper {
+  visibility: hidden;
+  height: 20vh;
+
+  svg {
+    height: 100%;  
+  }
+}
+
+.mb-mb-cls-1, .mb-cls-3, .mb-cls-5, .mb-cls-7, .mb-cls-9 {
+  fill: none;
+}
+
+.mb-cls-2 {
+  clip-path: url(#mb-clip-path);
+}
+
+.mb-cls-3, .mb-cls-5, .mb-cls-7, .mb-cls-9 {
+  stroke: #e9ebeb;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mb-cls-3 {
+  stroke-width: 13px;
+}
+
+.mb-cls-4 {
+  clip-path: url(#mb-clip-path-2);
+}
+
+.mb-cls-5 {
+  stroke-width: 12px;
+}
+
+.mb-cls-6 {
+  clip-path: url(#mb-clip-path-3);
+}
+
+.mb-cls-7 {
+  stroke-width: 14px;
+}
+
+.mb-cls-8 {
+  clip-path: url(#mb-clip-path-4);
+}
+
+.mb-cls-9 {
+  stroke-width: 10px;
+}
