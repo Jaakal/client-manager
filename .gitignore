@@ -35,15 +35,16 @@ build/
 ### React ###
 
 # dependencies
+/src/client/gsap-bonus.tgz
 /src/client/node_modules
-/src/client//.pnp
+/src/client/.pnp
 /src/client/.pnp.js
 
 # testing
-/src/client//coverage
+/src/client/coverage
 
 # production
-/src/client//build
+/src/client/build
 
 # misc
 /src/client/.DS_Store
