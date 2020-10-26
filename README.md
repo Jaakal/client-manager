@@ -1,6 +1,6 @@
 # Client Manager
 
-This is a small client managing application to keep record of persons depths with some personal data regarding to them. The application back end is Java API and front end is a React application.
+This is a small client managing application to keep records of peoples depths with some personal data regarding to them. The application back end is a Java String Boot API connected with the H2 in memory database and the front end is a React application.
 
 <div class="button-group">
   <a href="#screenshot" class="button">Screenshot</a> |
@@ -22,7 +22,7 @@ Clone the repository into your local computer. For animations to work you need t
 
 ### Installing
 
-First you will need to install [IntelliJ IDEA](https://www.jetbrains.com/idea/), [Eclipse](https://www.eclipse.org/ide/) or some similar other IDE which is capable to run Java projects. Second you will have to install the newest version of [Node](https://nodejs.org/en/download/). Then move from the project root directory to the "/src/client" directory through terminal and follow the instructions below. 
+At first you will need to install [IntelliJ IDEA](https://www.jetbrains.com/idea/), [Eclipse](https://www.eclipse.org/ide/) or some other IDE which is capable to run Java projects. Secondly you will have to install the newest version of [Node](https://nodejs.org/en/download/). Then move from the project root directory to the "/src/client" directory through terminal and follow the instructions below. 
 
 Install all the necessary JavaScript packages:
 
@@ -53,7 +53,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * [Redux](https://redux.js.org/) - A predictable state container for JS apps
 * [GreenSock](https://greensock.com/gsap/) - Professional-grade JavaScript animation tool for the modern web
 * [JavaScript](https://www.javascript.com/) - Programming language used for the front end
+* [Spring Boot](https://spring.io/projects/spring-boot) - Java framework used for the back end
 * [Java](https://www.java.com/en/) - Programming language used for the back end
+* [H2](http://www.h2database.com/html/features.html) - In memory database used for the back end
 * [HTML](https://en.wikipedia.org/wiki/HTML) - HyperText Markup Language
 * [SCSS](https://sass-lang.com/) - Sassy CSS
 * [VS Code](https://code.visualstudio.com/) - Code editor used
