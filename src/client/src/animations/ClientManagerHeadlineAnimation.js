@@ -1,357 +1,357 @@
 import React, { useEffect } from 'react';
 
-import { gsap } from 'gsap';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+// import { gsap } from 'gsap';
+// import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 import '../css/ClientManagerHeadlineAnimation.css';
 
-gsap.registerPlugin(DrawSVGPlugin);
+// gsap.registerPlugin(DrawSVGPlugin);
 
 const ClientManagerHeadlineAnimation = () => {
-  useEffect(() => {
-    gsap.defaults({
-      ease: 'linear',
-    });
+  // useEffect(() => {
+  //   gsap.defaults({
+  //     ease: 'linear',
+  //   });
 
-    const timeline = gsap.timeline();
+  //   const timeline = gsap.timeline();
 
-    const strokeDashDuration = 0.0015;
+  //   const strokeDashDuration = 0.0015;
 
-    const a_p1_strokeDashArray = 69;
-    const a_p2_strokeDashArray = 24;
+  //   const a_p1_strokeDashArray = 69;
+  //   const a_p2_strokeDashArray = 24;
 
-    const c_strokeDashArray = 109;
+  //   const c_strokeDashArray = 109;
 
-    const e_p1_strokeDashArray = 26;
-    const e_p2_strokeDashArray = 58;
+  //   const e_p1_strokeDashArray = 26;
+  //   const e_p2_strokeDashArray = 58;
 
-    const g_p1_strokeDashArray = 73;
-    const g_p2_strokeDashArray = 62;
+  //   const g_p1_strokeDashArray = 73;
+  //   const g_p2_strokeDashArray = 62;
 
-    const i_p1_strokeDashArray = 28;
-    const i_p2_strokeDashArray = 13;
+  //   const i_p1_strokeDashArray = 28;
+  //   const i_p2_strokeDashArray = 13;
 
-    const l_strokeDashArray = 64;
+  //   const l_strokeDashArray = 64;
 
-    const m_p1_strokeDashArray = 65;
-    const m_p2_strokeDashArray = 49;
-    const m_p3_strokeDashArray = 59;
-    const m_p4_strokeDashArray = 49;
+  //   const m_p1_strokeDashArray = 65;
+  //   const m_p2_strokeDashArray = 49;
+  //   const m_p3_strokeDashArray = 59;
+  //   const m_p4_strokeDashArray = 49;
 
-    const n_p1_strokeDashArray = 35;
-    const n_p2_strokeDashArray = 45;
-    const n_p3_strokeDashArray = 29;
+  //   const n_p1_strokeDashArray = 35;
+  //   const n_p2_strokeDashArray = 45;
+  //   const n_p3_strokeDashArray = 29;
 
-    const r_p1_strokeDashArray = 34;
-    const r_p2_strokeDashArray = 22;
-    const r_p3_strokeDashArray = 11;
+  //   const r_p1_strokeDashArray = 34;
+  //   const r_p2_strokeDashArray = 22;
+  //   const r_p3_strokeDashArray = 11;
 
-    const t_p1_strokeDashArray = 59;
-    const t_p2_strokeDashArray = 21;
+  //   const t_p1_strokeDashArray = 59;
+  //   const t_p2_strokeDashArray = 21;
 
-    const letterA = {
-      duration1: strokeDashDuration * a_p1_strokeDashArray,
-      duration2: strokeDashDuration * a_p2_strokeDashArray,
-    };
+  //   const letterA = {
+  //     duration1: strokeDashDuration * a_p1_strokeDashArray,
+  //     duration2: strokeDashDuration * a_p2_strokeDashArray,
+  //   };
 
-    const letterC = {
-      duration: strokeDashDuration * c_strokeDashArray,
-    };
+  //   const letterC = {
+  //     duration: strokeDashDuration * c_strokeDashArray,
+  //   };
 
-    const letterE = {
-      duration1: strokeDashDuration * e_p1_strokeDashArray,
-      duration2: strokeDashDuration * e_p2_strokeDashArray,
-    };
+  //   const letterE = {
+  //     duration1: strokeDashDuration * e_p1_strokeDashArray,
+  //     duration2: strokeDashDuration * e_p2_strokeDashArray,
+  //   };
 
-    const letterG = {
-      duration1: strokeDashDuration * g_p1_strokeDashArray,
-      duration2: strokeDashDuration * g_p2_strokeDashArray,
-    };
+  //   const letterG = {
+  //     duration1: strokeDashDuration * g_p1_strokeDashArray,
+  //     duration2: strokeDashDuration * g_p2_strokeDashArray,
+  //   };
 
-    const letterI = {
-      duration1: strokeDashDuration * i_p1_strokeDashArray,
-      duration2: strokeDashDuration * i_p2_strokeDashArray,
-    };
+  //   const letterI = {
+  //     duration1: strokeDashDuration * i_p1_strokeDashArray,
+  //     duration2: strokeDashDuration * i_p2_strokeDashArray,
+  //   };
 
-    const letterL = {
-      duration: strokeDashDuration * l_strokeDashArray,
-    };
+  //   const letterL = {
+  //     duration: strokeDashDuration * l_strokeDashArray,
+  //   };
 
-    const letterM = {
-      duration1: strokeDashDuration * m_p1_strokeDashArray,
-      duration2: strokeDashDuration * m_p2_strokeDashArray,
-      duration3: strokeDashDuration * m_p3_strokeDashArray,
-      duration4: strokeDashDuration * m_p4_strokeDashArray,
-    };
+  //   const letterM = {
+  //     duration1: strokeDashDuration * m_p1_strokeDashArray,
+  //     duration2: strokeDashDuration * m_p2_strokeDashArray,
+  //     duration3: strokeDashDuration * m_p3_strokeDashArray,
+  //     duration4: strokeDashDuration * m_p4_strokeDashArray,
+  //   };
 
-    const letterN = {
-      duration1: strokeDashDuration * n_p1_strokeDashArray,
-      duration2: strokeDashDuration * n_p2_strokeDashArray,
-      duration3: strokeDashDuration * n_p3_strokeDashArray,
-    };
+  //   const letterN = {
+  //     duration1: strokeDashDuration * n_p1_strokeDashArray,
+  //     duration2: strokeDashDuration * n_p2_strokeDashArray,
+  //     duration3: strokeDashDuration * n_p3_strokeDashArray,
+  //   };
 
-    const letterR = {
-      duration1: strokeDashDuration * r_p1_strokeDashArray,
-      duration2: strokeDashDuration * r_p2_strokeDashArray,
-      duration3: strokeDashDuration * r_p3_strokeDashArray,
-    };
+  //   const letterR = {
+  //     duration1: strokeDashDuration * r_p1_strokeDashArray,
+  //     duration2: strokeDashDuration * r_p2_strokeDashArray,
+  //     duration3: strokeDashDuration * r_p3_strokeDashArray,
+  //   };
 
-    const letterT = {
-      duration1: strokeDashDuration * t_p1_strokeDashArray,
-      duration2: strokeDashDuration * t_p2_strokeDashArray,
-    };
+  //   const letterT = {
+  //     duration1: strokeDashDuration * t_p1_strokeDashArray,
+  //     duration2: strokeDashDuration * t_p2_strokeDashArray,
+  //   };
 
-    timeline.from(
-      '.client-manager-headline-animation-wrapper',
-      { autoAlpha: 0 },
-      '+=0.1'
-    );
+  //   timeline.from(
+  //     '.client-manager-headline-animation-wrapper',
+  //     { autoAlpha: 0 },
+  //     '+=0.1'
+  //   );
 
-    timeline.from(
-      '#c1-stroke',
-      {
-        duration: letterC.duration,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#c1-stroke',
+  //     {
+  //       duration: letterC.duration,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#l1-stroke',
-      {
-        duration: letterL.duration,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#l1-stroke',
+  //     {
+  //       duration: letterL.duration,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#i1-p1-stroke',
-      {
-        duration: letterI.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#i1-p2-stroke',
-      {
-        duration: letterI.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#i1-p1-stroke',
+  //     {
+  //       duration: letterI.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#i1-p2-stroke',
+  //     {
+  //       duration: letterI.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#e1-p1-stroke',
-      {
-        duration: letterE.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#e1-p2-stroke',
-      {
-        duration: letterE.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#e1-p1-stroke',
+  //     {
+  //       duration: letterE.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#e1-p2-stroke',
+  //     {
+  //       duration: letterE.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#n1-p1-stroke',
-      {
-        duration: letterN.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#n1-p2-stroke',
-      {
-        duration: letterN.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#n1-p3-stroke',
-      {
-        duration: letterN.duration3,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#n1-p1-stroke',
+  //     {
+  //       duration: letterN.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#n1-p2-stroke',
+  //     {
+  //       duration: letterN.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#n1-p3-stroke',
+  //     {
+  //       duration: letterN.duration3,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#t1-p1-stroke',
-      {
-        duration: letterT.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#t1-p2-stroke',
-      {
-        duration: letterT.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#t1-p1-stroke',
+  //     {
+  //       duration: letterT.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#t1-p2-stroke',
+  //     {
+  //       duration: letterT.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#m1-p1-stroke',
-      {
-        duration: letterM.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#m1-p2-stroke',
-      {
-        duration: letterM.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#m1-p3-stroke',
-      {
-        duration: letterM.duration3,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#m1-p4-stroke',
-      {
-        duration: letterM.duration4,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#m1-p1-stroke',
+  //     {
+  //       duration: letterM.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#m1-p2-stroke',
+  //     {
+  //       duration: letterM.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#m1-p3-stroke',
+  //     {
+  //       duration: letterM.duration3,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#m1-p4-stroke',
+  //     {
+  //       duration: letterM.duration4,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#a1-p1-stroke',
-      {
-        duration: letterA.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#a1-p2-stroke',
-      {
-        duration: letterA.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#a1-p1-stroke',
+  //     {
+  //       duration: letterA.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#a1-p2-stroke',
+  //     {
+  //       duration: letterA.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#n2-p1-stroke',
-      {
-        duration: letterN.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#n2-p2-stroke',
-      {
-        duration: letterN.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#n2-p3-stroke',
-      {
-        duration: letterN.duration3,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#n2-p1-stroke',
+  //     {
+  //       duration: letterN.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#n2-p2-stroke',
+  //     {
+  //       duration: letterN.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#n2-p3-stroke',
+  //     {
+  //       duration: letterN.duration3,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#a2-p1-stroke',
-      {
-        duration: letterA.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#a2-p2-stroke',
-      {
-        duration: letterA.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#a2-p1-stroke',
+  //     {
+  //       duration: letterA.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#a2-p2-stroke',
+  //     {
+  //       duration: letterA.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#g1-p1-stroke',
-      {
-        duration: letterG.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#g1-p2-stroke',
-      {
-        duration: letterG.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#g1-p1-stroke',
+  //     {
+  //       duration: letterG.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#g1-p2-stroke',
+  //     {
+  //       duration: letterG.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#e2-p1-stroke',
-      {
-        duration: letterE.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#e2-p2-stroke',
-      {
-        duration: letterE.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
+  //   timeline.from(
+  //     '#e2-p1-stroke',
+  //     {
+  //       duration: letterE.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#e2-p2-stroke',
+  //     {
+  //       duration: letterE.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
 
-    timeline.from(
-      '#r1-p1-stroke',
-      {
-        duration: letterR.duration1,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#r1-p2-stroke',
-      {
-        duration: letterR.duration2,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-    timeline.from(
-      '#r1-p3-stroke',
-      {
-        duration: letterR.duration3,
-        drawSVG: '0% 0%',
-      },
-      `>`
-    );
-  }, []);
+  //   timeline.from(
+  //     '#r1-p1-stroke',
+  //     {
+  //       duration: letterR.duration1,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#r1-p2-stroke',
+  //     {
+  //       duration: letterR.duration2,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  //   timeline.from(
+  //     '#r1-p3-stroke',
+  //     {
+  //       duration: letterR.duration3,
+  //       drawSVG: '0% 0%',
+  //     },
+  //     `>`
+  //   );
+  // }, []);
 
   return (
     <div className='client-manager-headline-animation-wrapper'>

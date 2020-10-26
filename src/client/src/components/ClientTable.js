@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 import {
   getClients,
@@ -70,26 +70,26 @@ const ClientTable = ({
     closeClientForm,
   ]);
 
-  useEffect(() => {
-    if (clients && !loaderAnimation) {
-      const clientTable = document.querySelector('.client-table');
+  // useEffect(() => {
+  //   if (clients && !loaderAnimation) {
+  //     const clientTable = document.querySelector('.client-table');
 
-      if (window.getComputedStyle(clientTable).visibility === 'hidden')
-        gsap.from(clientTable, {
-          rotationX: -10,
-          rotationY: -25,
-          transformOrigin: '50% 50% -200',
-          autoAlpha: 0,
-          duration: 1,
-          delay: 1,
-        });
-    }
-  }, [clients, loaderAnimation]);
+  //     if (window.getComputedStyle(clientTable).visibility === 'hidden')
+  //       gsap.from(clientTable, {
+  //         rotationX: -10,
+  //         rotationY: -25,
+  //         transformOrigin: '50% 50% -200',
+  //         autoAlpha: 0,
+  //         duration: 1,
+  //         delay: 1,
+  //       });
+  //   }
+  // }, [clients, loaderAnimation]);
 
   return (
     <div className='client-table-wrapper'>
-      {(!clients || loaderAnimation) && <MountbirchLogoAnimation />}
-      {clients && !loaderAnimation && (
+      {(!clients) && <MountbirchLogoAnimation />}
+      {clients && (
         <>
           <ClientManagerHeadlineAnimation />
           <div className='client-table'>

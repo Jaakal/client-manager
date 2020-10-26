@@ -2,95 +2,95 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { gsap } from 'gsap';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+// import { gsap } from 'gsap';
+// import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 import { endLoaderAnimation } from '../actions/client';
 
 import '../css/MountbirchLogoAnimation.css';
 
-gsap.registerPlugin(DrawSVGPlugin);
+// gsap.registerPlugin(DrawSVGPlugin);
 
 const MountbirchLogoAnimation = ({
   client: { loading },
   endLoaderAnimation,
 }) => {
-  useEffect(() => {
-    if (!loading) {
-      gsap.defaults({
-        ease: 'linear',
-      });
+  // useEffect(() => {
+  //   if (!loading) {
+  //     gsap.defaults({
+  //       ease: 'linear',
+  //     });
 
-      const timeline = gsap.timeline();
-      timeline.repeat(1).yoyo(true);
+  //     const timeline = gsap.timeline();
+  //     timeline.repeat(1).yoyo(true);
 
-      const frameStrokeDasharray = 940;
+  //     const frameStrokeDasharray = 940;
 
-      // core stroke length 861
-      const core_p1_strokeDasharray = 768;
-      const core_p2_strokeDasharray = 93;
-      const core_p3_strokeDasharray = 53;
+  //     // core stroke length 861
+  //     const core_p1_strokeDasharray = 768;
+  //     const core_p2_strokeDasharray = 93;
+  //     const core_p3_strokeDasharray = 53;
 
-      const frameStrokeDashDuration = 0.0015;
-      const coreStrokeDashDuration =
-        (frameStrokeDashDuration * frameStrokeDasharray) / 861;
+  //     const frameStrokeDashDuration = 0.0015;
+  //     const coreStrokeDashDuration =
+  //       (frameStrokeDashDuration * frameStrokeDasharray) / 861;
 
-      const frameDuration = frameStrokeDashDuration * frameStrokeDasharray;
+  //     const frameDuration = frameStrokeDashDuration * frameStrokeDasharray;
 
-      const coreDuration1 = coreStrokeDashDuration * core_p1_strokeDasharray;
-      const coreDuration2 = coreStrokeDashDuration * core_p2_strokeDasharray;
-      const coreDuration3 = coreStrokeDashDuration * core_p3_strokeDasharray;
+  //     const coreDuration1 = coreStrokeDashDuration * core_p1_strokeDasharray;
+  //     const coreDuration2 = coreStrokeDashDuration * core_p2_strokeDasharray;
+  //     const coreDuration3 = coreStrokeDashDuration * core_p3_strokeDasharray;
 
-      timeline.from(
-        '.mount-birch-logo-animation-wrapper',
-        { autoAlpha: 0, duration: 0 },
-        '+=0.1'
-      );
+  //     timeline.from(
+  //       '.mount-birch-logo-animation-wrapper',
+  //       { autoAlpha: 0, duration: 0 },
+  //       '+=0.1'
+  //     );
 
-      timeline.from(
-        '#frame-stroke',
-        {
-          duration: frameDuration,
-          drawSVG: '100% 100%',
-          onReverseComplete: () => {
-            if (loading) {
-              timeline.restart();
-            } else {
-              endLoaderAnimation();
-            }
-          },
-        },
-        `<`
-      );
+  //     timeline.from(
+  //       '#frame-stroke',
+  //       {
+  //         duration: frameDuration,
+  //         drawSVG: '100% 100%',
+  //         onReverseComplete: () => {
+  //           if (loading) {
+  //             timeline.restart();
+  //           } else {
+  //             endLoaderAnimation();
+  //           }
+  //         },
+  //       },
+  //       `<`
+  //     );
 
-      timeline.from(
-        '#core-p1-stroke',
-        {
-          duration: coreDuration1,
-          drawSVG: '0% 0%',
-        },
-        `<`
-      );
+  //     timeline.from(
+  //       '#core-p1-stroke',
+  //       {
+  //         duration: coreDuration1,
+  //         drawSVG: '0% 0%',
+  //       },
+  //       `<`
+  //     );
 
-      timeline.from(
-        '#core-p2-stroke',
-        {
-          duration: coreDuration2,
-          drawSVG: '0% 0%',
-        },
-        `>`
-      );
+  //     timeline.from(
+  //       '#core-p2-stroke',
+  //       {
+  //         duration: coreDuration2,
+  //         drawSVG: '0% 0%',
+  //       },
+  //       `>`
+  //     );
 
-      timeline.from(
-        '#core-p3-stroke',
-        {
-          duration: coreDuration3,
-          drawSVG: '0% 0%',
-        },
-        `<`
-      );
-    }
-  }, [loading, endLoaderAnimation]);
+  //     timeline.from(
+  //       '#core-p3-stroke',
+  //       {
+  //         duration: coreDuration3,
+  //         drawSVG: '0% 0%',
+  //       },
+  //       `<`
+  //     );
+  //   }
+  // }, [loading, endLoaderAnimation]);
 
   return (
     <div className='mount-birch-logo-animation-wrapper'>

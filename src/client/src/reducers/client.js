@@ -25,7 +25,7 @@ const initialState = {
   databaseUpdated: undefined,
   formOpened: false,
   formCloseTriggered: false,
-  loaderAnimation: true,
+  loaderAnimation: false,
   loading: true,
 };
 

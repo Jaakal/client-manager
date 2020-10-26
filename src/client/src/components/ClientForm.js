@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 import {
   addClient,
@@ -114,24 +114,27 @@ const ClientForm = ({
   ]);
 
   useEffect(() => {
-    if (formOpened && !formCloseTriggered) {
-      gsap.from('.client-form', {
-        rotationX: -100,
-        transformOrigin: '50% 50% -400',
-        autoAlpha: 0,
-        duration: 0.5,
-        ease: 'back',
-      });
-    } else if (formCloseTriggered) {
-      gsap.to('.client-form', {
-        rotationX: 100,
-        transformOrigin: '50% 50% -400',
-        opacity: 0,
-        duration: 0.5,
-        ease: 'back.in',
-        onComplete: () => clientFormClosed(),
-      });
-    }
+    if (formCloseTriggered)
+      clientFormClosed()
+
+    // if (formOpened && !formCloseTriggered) {
+    //   gsap.from('.client-form', {
+    //     rotationX: -100,
+    //     transformOrigin: '50% 50% -400',
+    //     autoAlpha: 0,
+    //     duration: 0.5,
+    //     ease: 'back',
+    //   });
+    // } else if (formCloseTriggered) {
+    //   gsap.to('.client-form', {
+    //     rotationX: 100,
+    //     transformOrigin: '50% 50% -400',
+    //     opacity: 0,
+    //     duration: 0.5,
+    //     ease: 'back.in',
+    //     onComplete: () => clientFormClosed(),
+    //   });
+    // }
   }, [formOpened, formCloseTriggered, clientFormClosed]);
 
   return (

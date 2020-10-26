@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 import {
   getClients,
@@ -137,35 +137,35 @@ const Footer = ({
     calculatePageControls,
   ]);
 
-  useEffect(() => {
-    if (
-      paginationMaxStep !== undefined &&
-      paginationStep !== undefined &&
-      paginationPosition !== undefined &&
-      clientTableSize !== undefined &&
-      clients &&
-      !loaderAnimation
-    ) {
-      const footer = document.querySelector('.footer-wrapper');
+  // useEffect(() => {
+  //   if (
+  //     paginationMaxStep !== undefined &&
+  //     paginationStep !== undefined &&
+  //     paginationPosition !== undefined &&
+  //     clientTableSize !== undefined &&
+  //     clients &&
+  //     !loaderAnimation
+  //   ) {
+  //     const footer = document.querySelector('.footer-wrapper');
 
-      if (window.getComputedStyle(footer).visibility === 'hidden')
-        gsap.from(footer, {
-          rotationX: 75,
-          transformOrigin: '50% 50% 200',
-          autoAlpha: 0,
-          duration: 1.6,
-          delay: 1.8,
-          ease: 'power1',
-        });
-    }
-  }, [
-    paginationMaxStep,
-    paginationStep,
-    paginationPosition,
-    clientTableSize,
-    clients,
-    loaderAnimation,
-  ]);
+  //     if (window.getComputedStyle(footer).visibility === 'hidden')
+  //       gsap.from(footer, {
+  //         rotationX: 75,
+  //         transformOrigin: '50% 50% 200',
+  //         autoAlpha: 0,
+  //         duration: 1.6,
+  //         delay: 1.8,
+  //         ease: 'power1',
+  //       });
+  //   }
+  // }, [
+  //   paginationMaxStep,
+  //   paginationStep,
+  //   paginationPosition,
+  //   clientTableSize,
+  //   clients,
+  //   loaderAnimation,
+  // ]);
 
   const createPaginationSelectBoxElements = () => {
     const elements = [];

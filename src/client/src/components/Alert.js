@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 import { removeAlert, resetAlertAdded, alertRemoved } from '../actions/alert';
 
@@ -14,56 +14,61 @@ const Alert = ({
   removeAlert,
   alertRemoved,
 }) => {
-  useEffect(() => {
-    if (alertAdded) {
-      const timeline = gsap.timeline();
+  // useEffect(() => {
+  //   if (alertAdded) {
+  //     const timeline = gsap.timeline();
 
-      alerts.map((val, index, array) => {
-        gsap.set(`#alert-${index}`, { zIndex: 10000 - index });
+  //     alerts.map((val, index, array) => {
+  //       gsap.set(`#alert-${index}`, { zIndex: 10000 - index });
 
-        if (index !== alerts.length - 1) {
-          timeline.from(
-            `#alert-${index}`,
-            {
-              y: -50,
-              duration: 0.2,
-              ease: 'linear',
-            },
-            index !== 0 && '<'
-          );
-        } else {
-          timeline.from(
-            `#alert-${index}`,
-            {
-              rotationX: 15,
-              transformOrigin: '50% 50% -200',
-              opacity: 0,
-              duration: 0.2,
-              ease: 'linear',
-              onComplete: () => resetAlertAdded(),
-            },
-            '<'
-          );
-        }
+  //       if (index !== alerts.length - 1) {
+  //         timeline.from(
+  //           `#alert-${index}`,
+  //           {
+  //             y: -50,
+  //             duration: 0.2,
+  //             ease: 'linear',
+  //           },
+  //           index !== 0 && '<'
+  //         );
+  //       } else {
+  //         timeline.from(
+  //           `#alert-${index}`,
+  //           {
+  //             rotationX: 15,
+  //             transformOrigin: '50% 50% -200',
+  //             opacity: 0,
+  //             duration: 0.2,
+  //             ease: 'linear',
+  //             onComplete: () => resetAlertAdded(),
+  //           },
+  //           '<'
+  //         );
+  //       }
 
-        return val;
-      });
-    }
-  }, [alerts, alertAdded, resetAlertAdded]);
+  //       return val;
+  //     });
+  //   }
+  // }, [alerts, alertAdded, resetAlertAdded]);
 
   useEffect(() => {
     if (removeAlertTriggered) {
-      const uuid = alertsToRemoveIndexes[alertsToRemoveIndexes.length - 1];
-
-      gsap.to(`div[uuid='${uuid}']`, {
-        rotationX: -15,
-        transformOrigin: '50% 50% -200',
-        opacity: 0,
-        duration: 0.2,
-        ease: 'linear',
-        onComplete: () => alertRemoved(uuid),
-      });
+      const uuid = alertsToRemoveIndexes[alertsToRemoveIndexes.length - 1]
+      
+      alertRemoved(uuid)
     }
+    // if (removeAlertTriggered) {
+    //   const uuid = alertsToRemoveIndexes[alertsToRemoveIndexes.length - 1];
+
+    //   gsap.to(`div[uuid='${uuid}']`, {
+    //     rotationX: -15,
+    //     transformOrigin: '50% 50% -200',
+    //     opacity: 0,
+    //     duration: 0.2,
+    //     ease: 'linear',
+    //     onComplete: () => alertRemoved(uuid),
+    //   });
+    // }
   }, [alertsToRemoveIndexes, removeAlertTriggered, alertRemoved]);
 
   return (
