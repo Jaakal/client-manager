@@ -22,7 +22,7 @@ Clone the repository into your local computer. For animations to work you need t
 
 ### Installing
 
-First you will need install [IntelliJ IDEA](https://www.jetbrains.com/idea/), [Eclipse](https://www.eclipse.org/ide/) or some similar other IDE which is capable to run Java projects. Second you will have to install the newest version of [Node](https://nodejs.org/en/download/). Then move from the project root directory to the "/src/client" folder through terminal and follow the instructions below. 
+First you will need to install [IntelliJ IDEA](https://www.jetbrains.com/idea/), [Eclipse](https://www.eclipse.org/ide/) or some similar other IDE which is capable to run Java projects. Second you will have to install the newest version of [Node](https://nodejs.org/en/download/). Then move from the project root directory to the "/src/client" directory through terminal and follow the instructions below. 
 
 Install all the necessary JavaScript packages:
 
@@ -40,7 +40,7 @@ $ npm config set ignore-scripts false
 
 ## Available Scripts
 
-First run the Java back end API in the IDE and then in the client directory in the terminal you can run:
+First run the Java back end API in the IDE and then in the "/src/client" directory from the terminal you can run:
 
 ### `npm start`
 
@@ -51,17 +51,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 * [Redux](https://redux.js.org/) - A predictable state container for JS apps
-* [JavaScript](https://www.javascript.com/) - Programming language
-* [Java](https://www.java.com/en/) - Programming language used
+* [GreenSock](https://greensock.com/gsap/) - Professional-grade JavaScript animation tool for the modern web
+* [JavaScript](https://www.javascript.com/) - Programming language used for the front end
+* [Java](https://www.java.com/en/) - Programming language used for the back end
 * [HTML](https://en.wikipedia.org/wiki/HTML) - HyperText Markup Language
 * [SCSS](https://sass-lang.com/) - Sassy CSS
 * [VS Code](https://code.visualstudio.com/) - Code editor used
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/) - Code editor used
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) - IDE used
 * [Adobe Illustrator](https://www.adobe.com/ee/products/illustrator.html?gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xaA1ngovLIMzqxCsiZtiyX33a3P7FYeiHswOzUsIRnMwPwcY_HwIFEaArEDEALw_wcB&sdid=8JD95K3P&mv=search&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xaA1ngovLIMzqxCsiZtiyX33a3P7FYeiHswOzUsIRnMwPwcY_HwIFEaArEDEALw_wcB:G:s&s_kwcid=AL!3085!3!340839992350!e!!g!!adobe%20illustrator!1480122690!60147184474) - Program used for vector graphics
 
 ## Assets
 
-* [GreenSock](https://greensock.com/gsap/) - Professional-grade JavaScript animation tool for the modern web
 * [Kaushan Script](https://fonts.google.com/specimen/Kaushan+Script?query=kausha) - Font used
 * [Fredericka the Great](https://fonts.google.com/specimen/Fredericka+the+Great) - Font used
 * [Montserrat Alternates](https://fonts.google.com/specimen/Montserrat+Alternates?query=montser) - Font used
