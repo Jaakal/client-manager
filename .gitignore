@@ -47,7 +47,10 @@ build/
 /src/client/build
 
 # misc
+/.DS_Store
+/src/.DS_Store
 /src/client/.DS_Store
+/src/client/src/.DS_Store
 /src/client/.env.local
 /src/client/.env.development.local
 /src/client/.env.test.local
